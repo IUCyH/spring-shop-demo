@@ -1,7 +1,7 @@
 package com.iucyh.shop_demo.controller;
 
-import com.iucyh.shop_demo.domain.User;
-import com.iucyh.shop_demo.repository.auth.AuthRepository;
+import com.iucyh.shop_demo.entity.User;
+import com.iucyh.shop_demo.repository.auth.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 
@@ -9,10 +9,10 @@ import org.springframework.stereotype.Controller;
 @RequiredArgsConstructor
 public class AuthController {
 
-    private final AuthRepository authRepository;
+    private final UserRepository userRepository;
 
     public void save(String username, String password) {
-        User user = new User(1, "123456", username, "abc@abc", password);
-        authRepository.save(user);
+        User user = new User();
+        userRepository.save(user);
     }
 }

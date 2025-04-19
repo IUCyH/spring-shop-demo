@@ -1,12 +1,19 @@
 package com.iucyh.shop_demo.service;
 
-import com.iucyh.shop_demo.domain.User;
+import com.iucyh.shop_demo.dto.UserDto;
+import com.iucyh.shop_demo.entity.User;
+import com.iucyh.shop_demo.repository.auth.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class UserService {
 
-    public User getUser(int id) {
-        return new User(id, "abc123", "lucy", "abc@abc", "abc123");
+    private final UserRepository userRepository;
+
+    public UserDto getUser(Long id) {
+        User user = userRepository.getReferenceById(id);
+        return new UserDto(user);
     }
 }
