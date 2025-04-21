@@ -1,8 +1,7 @@
 package com.iucyh.shop_demo.service;
 
 import com.iucyh.shop_demo.dto.UserDto;
-import com.iucyh.shop_demo.entity.User;
-import com.iucyh.shop_demo.repository.auth.UserRepository;
+import com.iucyh.shop_demo.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;

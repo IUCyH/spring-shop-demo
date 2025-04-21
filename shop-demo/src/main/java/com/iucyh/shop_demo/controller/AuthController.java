@@ -1,7 +1,7 @@
 package com.iucyh.shop_demo.controller;
 
 import com.iucyh.shop_demo.entity.User;
-import com.iucyh.shop_demo.repository.auth.UserRepository;
+import com.iucyh.shop_demo.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 
